@@ -1,8 +1,8 @@
 import Navbar from "@/components/Navbar";
-import "./globals.css";
+import "@/styles/globals.css";
 
 export const metadata = {
-  title: "Shopping Cart",
+  title: "Undefined",
   description: "By Ivan Barrios",
 };
 
