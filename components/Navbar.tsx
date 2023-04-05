@@ -8,7 +8,7 @@ import {
 
 const Navbar = () => {
   return (
-    <nav className="w-full text-white flex fixed bg-black items-center h-20 px-4">
+    <nav className="w-full text-white flex sticky bg-black items-center h-20 px-4">
       <div className="flex w-full items-center gap-8 text-5xl">
         <IoMenu />
         <Link href="/" className="w-full text-3xl">
