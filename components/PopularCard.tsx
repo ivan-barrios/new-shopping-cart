@@ -35,19 +35,19 @@ const ProductCard = () => {
   };
 
   return (
-    <div className="w-full max-h-full m-auto py-16 px-4 relative group">
+    <div className="w-full max-h-full m-auto py-16 px-4 relative ">
       <Image
         src={slides[currentIndex].url}
         alt="Hoodie"
-        className="w-full h-full object-contain rounded-2xl bg-center bg-cover"
+        className="w-full h-full object-contain rounded-2xl"
         priority
       />
       {/* Left Arrow */}
-      <div className="hidden group-hover:block absolute top-[50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+      <div className="absolute top-[50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
         <BsChevronCompactLeft onClick={prevSlide} size={30} />
       </div>
       {/* Right Arrow */}
-      <div className="hidden group-hover:block absolute top-[50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+      <div className="absolute top-[50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
         <BsChevronCompactRight onClick={nextSlide} size={30} />
       </div>
       <div className="flex top-4 justify-center py-2">

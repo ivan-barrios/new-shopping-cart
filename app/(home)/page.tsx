@@ -25,7 +25,7 @@ export default function Home() {
         </div>
       </div>
       <PopularProducts />
-      {/* <Products /> */}
+      <Products />
     </div>
   );
 }
