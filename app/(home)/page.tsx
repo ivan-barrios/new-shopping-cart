@@ -4,6 +4,7 @@ import Image from "next/image";
 import img1 from "@/images/img1.webp";
 import PopularProducts from "@/components/PopularProducts";
 import Products from "@/components/Products";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function Home() {
       </div>
       <PopularProducts />
       <Products />
+      <Footer />
     </div>
   );
 }
