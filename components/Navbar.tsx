@@ -16,8 +16,8 @@ const Navbar = () => {
             Undefined
           </Link>
         </div>
-        <div className="flex items-center gap-2 justify-end w-full md:gap-8">
-          <IoSearchOutline />
+        <div className="flex items-center justify-end w-full">
+          <IoSearchOutline className="mr-4 md:mr-12" />
           <IoCartOutline />
           <span className="text-xs">(0)</span>
         </div>
