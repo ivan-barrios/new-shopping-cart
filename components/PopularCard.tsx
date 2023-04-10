@@ -2,67 +2,189 @@
 import Image from "next/image";
 import hoodieImg from "@/images/HOODIEPrueba.webp";
 import hoodieImg1 from "@/images/HOODIEPrueba1.webp";
-import { SetStateAction, useState } from "react";
 import { BsChevronCompactRight, BsChevronCompactLeft } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  ButtonBack,
+  ButtonNext,
+} from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
 
-const ProductCard = () => {
+const PopularCard = () => {
   const slides = [
     {
       url: hoodieImg1,
+      id: 0,
     },
     {
       url: hoodieImg,
+      id: 1,
+    },
+    {
+      url: hoodieImg,
+      id: 2,
+    },
+    {
+      url: hoodieImg,
+      id: 3,
+    },
+    {
+      url: hoodieImg,
+      id: 4,
+    },
+    {
+      url: hoodieImg,
+      id: 5,
+    },
+    {
+      url: hoodieImg,
+      id: 6,
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const goToSlide = (slideIndex: SetStateAction<number>) => {
-    setCurrentIndex(slideIndex);
-  };
-
   return (
-    <div className="w-full max-h-full m-auto py-16 px-4 relative ">
-      <Image
-        src={slides[currentIndex].url}
-        alt="Hoodie"
-        className="w-full h-full object-contain rounded-2xl"
-        priority
-      />
-      {/* Left Arrow */}
-      <div className="absolute top-[50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-        <BsChevronCompactLeft onClick={prevSlide} size={30} />
-      </div>
-      {/* Right Arrow */}
-      <div className="absolute top-[50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-        <BsChevronCompactRight onClick={nextSlide} size={30} />
-      </div>
-      <div className="flex top-4 justify-center py-2">
-        {slides.map((slide, slideIndex) => (
-          <div
-            key={slideIndex}
-            onClick={() => goToSlide(slideIndex)}
-            className="text-2xl cursor-pointer"
-          >
-            <RxDotFilled />
+    <div className="max-w-[520px] md:max-w-full md:w-full">
+      <div className="w-full">
+        {/* For Tablet */}
+        <CarouselProvider
+          className="lg:hidden md:block hidden"
+          naturalSlideWidth={200}
+          naturalSlideHeight={100}
+          isIntrinsicHeight={true}
+          totalSlides={7}
+          visibleSlides={2}
+          step={1}
+          infinite={true}
+        >
+          <div className="w-full relative flex items-center justify-center">
+            <ButtonBack className="absolute z-30 left-0 ml-8 focus:outline-none cursor-pointer">
+              <BsChevronCompactLeft className="text-4xl" />
+            </ButtonBack>
+            <div className="w-full h-full overflow-x-hidden overflow-y-hidden">
+              <Slider>
+                <div className="h-full flex lg:gap-8 md:gap-0 gap-14 items-center justify-start transition ease-out duration-700">
+                  {slides.map((slide) => (
+                    <Slide key={slide.id} index={slide.id}>
+                      <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                        <Image
+                          src={hoodieImg1}
+                          alt="Hoodie"
+                          className="w-full h-full object-contain rounded-2xl"
+                          priority
+                        />
+                        <div className="absolute flex flex-col gap-2 bottom-6 left-4 text-black">
+                          <h3 className="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6">
+                            HOODIE (AND CONFUSED) I
+                          </h3>
+                          <h2>$40000</h2>
+                        </div>
+                      </div>
+                    </Slide>
+                  ))}
+                </div>
+              </Slider>
+            </div>
+            <ButtonNext className="absolute z-30 right-0 mr-8 focus:outline-none cursor-pointer">
+              <BsChevronCompactRight className="text-4xl" />
+            </ButtonNext>
           </div>
-        ))}
+        </CarouselProvider>
+
+        {/* For Mobile */}
+        <CarouselProvider
+          className="block md:hidden"
+          naturalSlideWidth={100}
+          naturalSlideHeight={100}
+          isIntrinsicHeight={true}
+          totalSlides={7}
+          visibleSlides={1}
+          step={1}
+          infinite={true}
+        >
+          <div className="w-full relative flex items-center justify-center">
+            <ButtonBack className="absolute z-30 left-0 ml-8 focus:outline-none cursor-pointer">
+              <BsChevronCompactLeft className="text-4xl" />
+            </ButtonBack>
+            <div className="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
+              <Slider>
+                <div className="h-full flex items-center justify-center transition ease-out duration-700">
+                  {slides.map((slide) => (
+                    <Slide key={slide.id} index={slide.id}>
+                      <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                        <Image
+                          src={hoodieImg1}
+                          alt="Hoodie"
+                          className="w-full h-full object-contain rounded-2xl"
+                          priority
+                        />
+                        <div className="absolute flex flex-col gap-2 bottom-6 left-4 text-black">
+                          <h3 className="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6">
+                            HOODIE (AND CONFUSED) I
+                          </h3>
+                          <h2>$40000</h2>
+                        </div>
+                      </div>
+                    </Slide>
+                  ))}
+                </div>
+              </Slider>
+            </div>
+            <ButtonNext className="absolute z-30 right-0 mr-8 focus:outline-none cursor-pointer">
+              <BsChevronCompactRight className="text-4xl" />
+            </ButtonNext>
+          </div>
+        </CarouselProvider>
+
+        {/* For Desktop */}
+        <CarouselProvider
+          className="hidden lg:block"
+          naturalSlideWidth={100}
+          naturalSlideHeight={100}
+          isIntrinsicHeight={true}
+          totalSlides={7}
+          visibleSlides={3}
+          step={1}
+          infinite={true}
+        >
+          <div className="w-full relative flex items-center justify-center">
+            <ButtonBack className="absolute z-30 left-12 focus:outline-none cursor-pointer">
+              <BsChevronCompactLeft className="text-4xl" />
+            </ButtonBack>
+            <div className="w-full h-full mx-12 overflow-x-hidden overflow-y-hidden">
+              <Slider>
+                <div className="h-full flex items-center justify-center transition ease-out duration-700">
+                  {slides.map((slide) => (
+                    <Slide key={slide.id} index={slide.id}>
+                      <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                        <Image
+                          src={hoodieImg1}
+                          alt="Hoodie"
+                          className="w-full h-full object-contain rounded-2xl"
+                          priority
+                        />
+                        <div className="absolute flex flex-col gap-2 bottom-6 left-4 text-black">
+                          <h3 className="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6">
+                            HOODIE (AND CONFUSED) I
+                          </h3>
+                          <h2>$40000</h2>
+                        </div>
+                      </div>
+                    </Slide>
+                  ))}
+                </div>
+              </Slider>
+            </div>
+            <ButtonNext className="absolute z-30 right-12 focus:outline-none cursor-pointer">
+              <BsChevronCompactRight className="text-4xl" />
+            </ButtonNext>
+          </div>
+        </CarouselProvider>
       </div>
     </div>
   );
 };
 
-export default ProductCard;
+export default PopularCard;

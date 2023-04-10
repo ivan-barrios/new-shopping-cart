@@ -28,7 +28,7 @@ export default function Home() {
           priority
         />
         <div className="w-full absolute flex flex-col items-center bottom-2 gap-2 text-center">
-          <SlArrowDown className="text-4xl" />
+          <SlArrowDown className="text-4xl cursor-pointer" />
           <p className="text-sm">
             ENTREGAS A TODO EL MUNDO // COMPRÁ CON <br /> SEGURIDAD
           </p>
