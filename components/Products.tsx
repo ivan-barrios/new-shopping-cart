@@ -7,11 +7,11 @@ const Products = () => {
   return (
     <div className="bg-white text-black">
       <h2 className="ml-4 pt-20 pb-10">PRODUCTS</h2>
-      <div className="grid grid-cols-2 gap-4 justify-evenly px-2">
-        <Product imgSrc={hoodie} />
+      <div className="grid grid-cols-2 gap-8 px-8">
         <Product imgSrc={hoodie1} />
         <Product imgSrc={hoodie1} />
-        <Product imgSrc={hoodie} />
+        <Product imgSrc={hoodie1} />
+        <Product imgSrc={hoodie1} />
         <Product imgSrc={hoodie} />
         <Product imgSrc={hoodie1} />
       </div>
