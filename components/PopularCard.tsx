@@ -3,7 +3,6 @@ import Image from "next/image";
 import hoodieImg from "@/images/HOODIEPrueba.webp";
 import hoodieImg1 from "@/images/HOODIEPrueba1.webp";
 import { BsChevronCompactRight, BsChevronCompactLeft } from "react-icons/bs";
-import { RxDotFilled } from "react-icons/rx";
 import {
   CarouselProvider,
   Slider,
@@ -12,6 +11,8 @@ import {
   ButtonNext,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
+
+// THIS FILE CAN BE IMPROVED
 
 const PopularCard = () => {
   const slides = [
@@ -72,7 +73,7 @@ const PopularCard = () => {
                         <Image
                           src={hoodieImg1}
                           alt="Hoodie"
-                          className="w-full h-full object-contain rounded-2xl"
+                          className="w-full h-full object-contain rounded-2xl cursor-pointer"
                           priority
                         />
                         <div className="absolute flex flex-col gap-2 bottom-6 left-4 text-black">
@@ -117,7 +118,7 @@ const PopularCard = () => {
                         <Image
                           src={hoodieImg1}
                           alt="Hoodie"
-                          className="w-full h-full object-contain rounded-2xl"
+                          className="w-full h-full object-contain rounded-2xl cursor-pointer"
                           priority
                         />
                         <div className="absolute flex flex-col gap-2 bottom-6 left-4 text-black">
@@ -162,7 +163,7 @@ const PopularCard = () => {
                         <Image
                           src={hoodieImg1}
                           alt="Hoodie"
-                          className="w-full h-full object-contain rounded-2xl"
+                          className="w-full h-full object-contain cursor-pointer rounded-2xl"
                           priority
                         />
                         <div className="absolute flex flex-col gap-2 bottom-6 left-4 text-black">
