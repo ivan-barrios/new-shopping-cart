@@ -1,19 +1,18 @@
-import hoodie from "@/images/HOODIEPrueba.webp";
-import hoodie1 from "@/images/HOODIEPrueba1.webp";
+import hoodie from "@/images/HOODIEPrueba1.webp";
 import Product from "@/components/Product";
 import Link from "next/link";
 
 const Products = () => {
   return (
-    <div className="bg-white text-black">
+    <div className="bg-white text-black xl:px-[15%]">
       <h2 className="ml-4 pt-20 pb-10">PRODUCTS</h2>
-      <div className="grid grid-cols-2 gap-8 px-8">
-        <Product imgSrc={hoodie1} />
-        <Product imgSrc={hoodie1} />
-        <Product imgSrc={hoodie1} />
-        <Product imgSrc={hoodie1} />
+      <div className="grid grid-cols-2 gap-8 px-8 md:grid-cols-3 md:px-16 xl:grid-cols-4">
         <Product imgSrc={hoodie} />
-        <Product imgSrc={hoodie1} />
+        <Product imgSrc={hoodie} />
+        <Product imgSrc={hoodie} />
+        <Product imgSrc={hoodie} />
+        <Product imgSrc={hoodie} />
+        <Product imgSrc={hoodie} />
       </div>
       <div className="flex justify-center mt-4 text-sm w-full">
         <div className="w-[70%] p-2 border-[1px] border-black">

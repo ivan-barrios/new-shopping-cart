@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="h-[80vh] flex flex-col items-center justify-evenly">
+    <footer className="h-[80vh] flex flex-col items-center justify-evenly xl:px-[15%]">
       <h1 className="mt-12 text-6xl text-center">UNDEFINED</h1>
       <p className="text-xs">atencionalcliente@undefinedba.com</p>
       <div className="w-full flex justify-evenly text-gray-400">
