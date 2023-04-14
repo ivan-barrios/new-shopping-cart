@@ -1,5 +1,5 @@
 import hoodie from "@/images/HOODIEPrueba1.webp";
-import Product from "@/components/Product";
+import Product from "@/components/subcomponents/Product";
 import Link from "next/link";
 
 const Products = () => {

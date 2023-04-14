@@ -1,4 +1,4 @@
-import PopularCard from "./PopularCard";
+import PopularCard from "./subcomponents/PopularCard";
 
 const PopularProducts = () => {
   return (
