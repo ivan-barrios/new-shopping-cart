@@ -2,7 +2,10 @@ import PopularCard from "./subcomponents/PopularCard";
 
 const PopularProducts = () => {
   return (
-    <div className="bg-white text-black w-full xl:px-[15%]">
+    <div
+      id="popularProducts"
+      className="bg-white text-black w-full xl:px-[15%]"
+    >
       <h2 id="popular" className="ml-4 pt-20 pb-10">
         UNDEFINED AND CONFUSED
       </h2>
