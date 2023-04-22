@@ -16,13 +16,13 @@ const NavMenu = ({ collapse, setCollapse }) => {
         />
       </div>
       <div className="flex flex-col gap-4 text-2xl items-center">
-        <a
+        <Link
           className="p-4 bg-gray-100 w-full text-center hover:bg-slate-50"
-          href="#home"
+          href="/"
           onClick={() => setCollapse(false)}
         >
           Home
-        </a>
+        </Link>
         <a
           className="p-4 bg-gray-100 w-full text-center hover:bg-slate-50"
           href="#search"
@@ -30,6 +30,13 @@ const NavMenu = ({ collapse, setCollapse }) => {
         >
           Search
         </a>
+        <Link
+          className="p-4 bg-gray-100 w-full text-center hover:bg-slate-50"
+          href="/shop"
+          onClick={() => setCollapse(false)}
+        >
+          Shop
+        </Link>
         <a
           className="p-4 bg-gray-100 w-full text-center hover:bg-slate-50"
           href="#cart"

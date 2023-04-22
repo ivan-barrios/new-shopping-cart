@@ -16,7 +16,7 @@ const Navbar = () => {
             onClick={() => setCollapse(true)}
             className="cursor-pointer"
           />
-          <Link href="/" className="text-3xl">
+          <Link href="/#home" className="text-3xl" legacyBehavior>
             Undefined
           </Link>
         </div>

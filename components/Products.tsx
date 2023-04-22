@@ -15,9 +15,9 @@ const Products = () => {
         <Product imgSrc={hoodie} />
       </div>
       <div className="flex justify-center mt-4 text-sm w-full">
-        <div className="w-[70%] p-2 border-[1px] border-black">
+        <div className="w-[70%] border-[1px] border-black">
           <Link href="/shop" className="">
-            <h2 className="text-center">VER TODOS LOS PRODUCTOS</h2>
+            <h2 className="text-center p-2">VER TODOS LOS PRODUCTOS</h2>
           </Link>
         </div>
       </div>
