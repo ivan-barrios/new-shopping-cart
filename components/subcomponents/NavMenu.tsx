@@ -5,9 +5,9 @@ import { FaDiscord, FaInstagram } from "react-icons/fa";
 const NavMenu = ({ collapse, setCollapse }) => {
   return (
     <div
-      className={`absolute ${
+      className={`fixed ${
         collapse ? "left-0" : "left-[-100vw]"
-      } left-0 top-0 w-full bg-white h-screen transition-all ease-in-out duration-500 md:w-[40vw]`}
+      } left-0 top-0 w-full bg-white h-screen transition-all ease-in-out duration-400 md:w-[40vw]`}
     >
       <div className="flex justify-end p-4">
         <TfiClose
