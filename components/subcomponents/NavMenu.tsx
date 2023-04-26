@@ -7,7 +7,7 @@ const NavMenu = ({ collapseMenu, setCollapseMenu }) => {
     <div
       className={`fixed ${
         collapseMenu ? "left-0" : "left-[-100vw]"
-      } left-0 top-0 w-full bg-white h-screen transition-all ease-in-out duration-400 md:w-[40vw]`}
+      } left-0 top-0 w-full bg-white h-screen transition-all ease-in-out duration-400 md:w-[400px] lg:w-[500px]`}
     >
       <div className="flex justify-end p-4">
         <TfiClose
