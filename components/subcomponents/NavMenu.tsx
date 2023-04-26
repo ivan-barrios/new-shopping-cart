@@ -2,16 +2,16 @@ import Link from "next/link";
 import { TfiClose } from "react-icons/tfi";
 import { FaDiscord, FaInstagram } from "react-icons/fa";
 
-const NavMenu = ({ collapse, setCollapse }) => {
+const NavMenu = ({ collapseMenu, setCollapseMenu }) => {
   return (
     <div
       className={`fixed ${
-        collapse ? "left-0" : "left-[-100vw]"
+        collapseMenu ? "left-0" : "left-[-100vw]"
       } left-0 top-0 w-full bg-white h-screen transition-all ease-in-out duration-400 md:w-[40vw]`}
     >
       <div className="flex justify-end p-4">
         <TfiClose
-          onClick={() => setCollapse(false)}
+          onClick={() => setCollapseMenu(false)}
           className="cursor-pointer text-4xl hover:text-gray-600"
         />
       </div>
@@ -19,35 +19,37 @@ const NavMenu = ({ collapse, setCollapse }) => {
         <Link
           className="p-4 bg-gray-100 w-full text-center hover:bg-slate-50"
           href="/"
-          onClick={() => setCollapse(false)}
+          onClick={() => setCollapseMenu(false)}
         >
           Home
         </Link>
         <a
           className="p-4 bg-gray-100 w-full text-center hover:bg-slate-50"
           href="#search"
-          onClick={() => setCollapse(false)}
+          onClick={() => setCollapseMenu(false)}
         >
           Search
         </a>
         <Link
           className="p-4 bg-gray-100 w-full text-center hover:bg-slate-50"
           href="/shop"
-          onClick={() => setCollapse(false)}
+          onClick={() => setCollapseMenu(false)}
         >
           Shop
         </Link>
         <a
           className="p-4 bg-gray-100 w-full text-center hover:bg-slate-50"
           href="#cart"
-          onClick={() => setCollapse(false)}
+          onClick={() => setCollapseMenu(false)}
         >
           Cart
         </a>
         <a
           className="p-4 bg-gray-100 w-full text-center hover:bg-slate-50"
           href="#contact"
-          onClick={() => setCollapse(false)}
+          onClick={() => {
+            setCollapseMenu(false);
+          }}
         >
           Contact
         </a>

@@ -11,12 +11,15 @@ const Navbar = () => {
 
   return (
     <nav className="w-full text-black flex sticky top-0 bg-white items-center h-16 px-4 z-50">
-      <NavMenu collapse={collapseMenu} setCollapse={setCollapseMenu} />
-      <Cart collapse={collapseCart} setCollapse={setCollapseCart} />
+      <NavMenu collapseMenu={collapseMenu} setCollapseMenu={setCollapseMenu} />
+      <Cart collapseCart={collapseCart} setCollapseCart={setCollapseCart} />
       <div className="flex w-full items-center text-3xl">
         <div className="flex gap-4">
           <IoMenu
-            onClick={() => setCollapseMenu(true)}
+            onClick={() => {
+              setCollapseMenu(true);
+              setCollapseCart(false);
+            }}
             className="cursor-pointer"
           />
           <Link href="/" className="text-3xl" legacyBehavior>
@@ -26,7 +29,10 @@ const Navbar = () => {
         <div className="flex items-center justify-end w-full">
           <IoSearchOutline className="mr-4 cursor-pointer md:mr-12" />
           <IoCartOutline
-            onClick={() => setCollapseCart(true)}
+            onClick={() => {
+              setCollapseCart(true);
+              setCollapseMenu(false);
+            }}
             className="cursor-pointer"
           />
           <span className="text-xs">(0)</span>

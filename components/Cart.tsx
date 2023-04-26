@@ -2,17 +2,17 @@ import Link from "next/link";
 import { TfiClose } from "react-icons/tfi";
 import CartProdcut from "./subcomponents/CartProduct";
 
-const Cart = ({ collapse, setCollapse }) => {
+const Cart = ({ collapseCart, setCollapseCart }) => {
   return (
     <div
       className={`fixed ${
-        collapse ? "right-0" : "right-[-100vw]"
+        collapseCart ? "right-0" : "right-[-100vw]"
       } right-0 top-0 w-full bg-white h-screen transition-all ease-in-out duration-400 md:w-[40vw]`}
     >
-      <div>
+      <div className="flex w-full">
         <h1>Carrito de compras</h1>
         <TfiClose
-          onClick={() => setCollapse(false)}
+          onClick={() => setCollapseCart(false)}
           className="cursor-pointer text-4xl hover:text-gray-600"
         />
       </div>
