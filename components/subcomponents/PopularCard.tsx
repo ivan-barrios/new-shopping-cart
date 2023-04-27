@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import hoodieImg from "@/images/HOODIEPrueba.webp";
 import hoodieImg1 from "@/images/HOODIEPrueba1.webp";
 import { BsChevronCompactRight, BsChevronCompactLeft } from "react-icons/bs";
@@ -69,7 +70,10 @@ const PopularCard = () => {
                 <div className="h-full flex lg:gap-8 md:gap-0 gap-14 items-center justify-start transition ease-out duration-700">
                   {slides.map((slide) => (
                     <Slide key={slide.id} index={slide.id}>
-                      <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                      <Link
+                        href="/shop/HOODIE(ANDCONFUSED)I"
+                        className="flex flex-shrink-0 relative w-full sm:w-auto"
+                      >
                         <Image
                           src={hoodieImg1}
                           alt="Hoodie"
@@ -82,7 +86,7 @@ const PopularCard = () => {
                           </h3>
                           <h2>$40000</h2>
                         </div>
-                      </div>
+                      </Link>
                     </Slide>
                   ))}
                 </div>
@@ -114,7 +118,10 @@ const PopularCard = () => {
                 <div className="h-full flex items-center justify-center transition ease-out duration-700">
                   {slides.map((slide) => (
                     <Slide key={slide.id} index={slide.id}>
-                      <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                      <Link
+                        href="/shop/HOODIE(ANDCONFUSED)I"
+                        className="flex flex-shrink-0 relative w-full sm:w-auto"
+                      >
                         <Image
                           src={hoodieImg1}
                           alt="Hoodie"
@@ -127,7 +134,7 @@ const PopularCard = () => {
                           </h3>
                           <h2>$40000</h2>
                         </div>
-                      </div>
+                      </Link>
                     </Slide>
                   ))}
                 </div>
@@ -159,7 +166,10 @@ const PopularCard = () => {
                 <div className="h-full flex items-center justify-center transition ease-out duration-700">
                   {slides.map((slide) => (
                     <Slide key={slide.id} index={slide.id}>
-                      <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                      <Link
+                        href="/shop/HOODIE(ANDCONFUSED)I"
+                        className="flex flex-shrink-0 relative w-full sm:w-auto"
+                      >
                         <Image
                           src={hoodieImg1}
                           alt="Hoodie"
@@ -172,7 +182,7 @@ const PopularCard = () => {
                           </h3>
                           <h2>$40000</h2>
                         </div>
-                      </div>
+                      </Link>
                     </Slide>
                   ))}
                 </div>
