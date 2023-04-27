@@ -2,7 +2,7 @@ import Link from "next/link";
 import { TfiClose } from "react-icons/tfi";
 import { FaDiscord, FaInstagram } from "react-icons/fa";
 
-const NavMenu = ({ collapseMenu, setCollapseMenu }) => {
+const NavMenu = ({ collapseMenu, setCollapseMenu, setCollapseCart }) => {
   return (
     <div
       className={`fixed ${
@@ -37,13 +37,15 @@ const NavMenu = ({ collapseMenu, setCollapseMenu }) => {
         >
           Shop
         </Link>
-        <a
-          className="p-4 bg-gray-100 w-full text-center hover:bg-slate-50"
-          href="#cart"
-          onClick={() => setCollapseMenu(false)}
+        <div
+          className="p-4 bg-gray-100 w-full text-center cursor-pointer hover:bg-slate-50"
+          onClick={() => {
+            setCollapseMenu(false);
+            setCollapseCart(true);
+          }}
         >
           Cart
-        </a>
+        </div>
         <a
           className="p-4 bg-gray-100 w-full text-center hover:bg-slate-50"
           href="#contact"

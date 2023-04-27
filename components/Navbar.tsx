@@ -11,7 +11,11 @@ const Navbar = () => {
 
   return (
     <nav className="w-full text-black flex sticky top-0 bg-white items-center h-16 px-4 z-50">
-      <NavMenu collapseMenu={collapseMenu} setCollapseMenu={setCollapseMenu} />
+      <NavMenu
+        collapseMenu={collapseMenu}
+        setCollapseMenu={setCollapseMenu}
+        setCollapseCart={setCollapseCart}
+      />
       <Cart collapseCart={collapseCart} setCollapseCart={setCollapseCart} />
       <div className="flex w-full items-center text-3xl">
         <div className="flex gap-4">
