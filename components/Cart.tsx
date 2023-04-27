@@ -11,7 +11,7 @@ const Cart = ({ collapseCart, setCollapseCart }) => {
     <div
       className={`fixed ${
         collapseCart ? "right-0" : "right-[-100vw]"
-      } right-0 top-0 w-full bg-gray-100 h-screen transition-all ease-in-out duration-400 md:w-[400px] lg:w-[500px]`}
+      } right-0 top-0 w-[100vw] bg-gray-100 h-screen transition-all ease-in-out duration-400 md:w-[400px] lg:w-[500px]`}
     >
       <div className="flex justify-between items-center w-full h-[70px] p-4">
         <h1 className="text-xl">CARRITO DE COMPRAS</h1>

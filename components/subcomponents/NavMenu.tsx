@@ -5,7 +5,7 @@ import { FaDiscord, FaInstagram } from "react-icons/fa";
 const NavMenu = ({ collapseMenu, setCollapseMenu, setCollapseCart }) => {
   return (
     <div
-      className={`fixed ${
+      className={`absolute ${
         collapseMenu ? "left-0" : "left-[-100vw]"
       } left-0 top-0 w-full bg-white h-screen transition-all ease-in-out duration-400 md:w-[400px] lg:w-[500px]`}
     >
