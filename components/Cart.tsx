@@ -47,11 +47,20 @@ const Cart = ({ collapseCart, setCollapseCart }) => {
         </div>
         <Link
           href="/"
-          className="bg-black text-white w-full text-center text-sm py-2"
+          onClick={() => {
+            setCollapseCart(false);
+          }}
+          className="bg-black hover:bg-stone-800 text-white w-full text-center text-sm py-2 transition-all duration-500"
         >
           INICIAR COMPRA
         </Link>
-        <Link href="/shop" className="text-xs mt-4">
+        <Link
+          href="/shop"
+          onClick={() => {
+            setCollapseCart(false);
+          }}
+          className="text-xs mt-4"
+        >
           Ver más productos
         </Link>
       </div>

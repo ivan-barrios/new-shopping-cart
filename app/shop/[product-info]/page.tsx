@@ -6,8 +6,12 @@ import Footer from "@/components/Footer";
 const ProductInfo = () => {
   return (
     <div className="p-4 flex flex-col items-center">
-      <div className="flex flex-col gap-4 md:flex-row md:justify-center">
-        <Image src={hoodie} alt="Hoodie" className="w-full md:w-[300px]" />
+      <div className="flex flex-col gap-4 md:flex-row md:justify-evenly">
+        <Image
+          src={hoodie}
+          alt="Hoodie"
+          className="w-full max-w-[900px] md:w-[40%]"
+        />
         <div className="flex flex-col justify-evenly">
           <div className="flex flex-col gap-2">
             <h2 className="text-md">HOODIE (UNDEFINED AND CONFUSED) I</h2>
