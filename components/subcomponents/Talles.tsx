@@ -15,7 +15,7 @@ const Talles = () => {
       <div
         className={`${
           selectedXS ? "bg-black text-white" : ""
-        } w-8 h-8 text-xs flex justify-center items-center border-[1px] border-black`}
+        } w-8 h-8 text-xs flex justify-center items-center cursor-pointer border-[1px] border-black`}
         onClick={() => {
           setSelectedXS(true);
           setSelectedS(false);
@@ -30,7 +30,7 @@ const Talles = () => {
       <div
         className={`${
           selectedS ? "bg-black text-white" : ""
-        } w-8 h-8 text-xs flex justify-center items-center border-[1px] border-black`}
+        } w-8 h-8 text-xs flex justify-center items-center cursor-pointer border-[1px] border-black`}
         onClick={() => {
           setSelectedXS(false);
           setSelectedS(true);
@@ -45,7 +45,7 @@ const Talles = () => {
       <div
         className={`${
           selectedM ? "bg-black text-white" : ""
-        } w-8 h-8 text-xs flex justify-center items-center border-[1px] border-black`}
+        } w-8 h-8 text-xs flex justify-center items-center cursor-pointer border-[1px] border-black`}
         onClick={() => {
           setSelectedXS(false);
           setSelectedS(false);
@@ -60,7 +60,7 @@ const Talles = () => {
       <div
         className={`${
           selectedL ? "bg-black text-white" : ""
-        } w-8 h-8 text-xs flex justify-center items-center border-[1px] border-black`}
+        } w-8 h-8 text-xs flex justify-center items-center cursor-pointer border-[1px] border-black`}
         onClick={() => {
           setSelectedXS(false);
           setSelectedS(false);
@@ -75,7 +75,7 @@ const Talles = () => {
       <div
         className={`${
           selectedXL ? "bg-black text-white" : ""
-        } w-8 h-8 text-xs flex justify-center items-center border-[1px] border-black`}
+        } w-8 h-8 text-xs flex justify-center items-center cursor-pointer border-[1px] border-black`}
         onClick={() => {
           setSelectedXS(false);
           setSelectedS(false);
@@ -90,7 +90,7 @@ const Talles = () => {
       <div
         className={`${
           selectedXXL ? "bg-black text-white" : ""
-        } w-8 h-8 text-xs flex justify-center items-center border-[1px] border-black`}
+        } w-8 h-8 text-xs flex justify-center items-center cursor-pointer border-[1px] border-black`}
         onClick={() => {
           setSelectedXS(false);
           setSelectedS(false);

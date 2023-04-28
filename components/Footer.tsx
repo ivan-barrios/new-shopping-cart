@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      className="h-[80vh] flex flex-col items-center justify-evenly xl:px-[15%]"
+      className="h-[80vh] w-full flex flex-col items-center justify-evenly xl:px-[15%]"
     >
       <h1 className="mt-12 text-6xl text-center">UNDEFINED</h1>
       <p className="text-xs">atencionalcliente@undefinedba.com</p>
@@ -25,7 +25,10 @@ const Footer = () => {
             id="email"
             className="p-2 border-b-[1px] border-black w-44"
           />
-          <button type="submit" className="bg-black text-white p-2 text-xs">
+          <button
+            type="submit"
+            className="bg-black hover:bg-stone-800 text-white p-2 text-xs transition-all duration-500"
+          >
             ENVIAR
           </button>
         </div>

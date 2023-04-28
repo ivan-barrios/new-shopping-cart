@@ -31,7 +31,10 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex items-center justify-end w-full">
-          <IoSearchOutline className="mr-4 cursor-pointer md:mr-12" />
+          <IoSearchOutline
+            onClick={() => {}}
+            className="mr-4 cursor-pointer md:mr-12"
+          />
           <IoCartOutline
             onClick={() => {
               setCollapseCart(true);
