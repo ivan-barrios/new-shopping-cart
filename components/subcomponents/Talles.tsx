@@ -3,49 +3,102 @@
 import { useState } from "react";
 
 const Talles = () => {
-  const [selected, setSelected] = useState(false);
+  const [selectedXS, setSelectedXS] = useState(false);
+  const [selectedS, setSelectedS] = useState(false);
+  const [selectedM, setSelectedM] = useState(true);
+  const [selectedL, setSelectedL] = useState(false);
+  const [selectedXL, setSelectedXL] = useState(false);
+  const [selectedXXL, setSelectedXXL] = useState(false);
 
   return (
     <div className="flex gap-4">
       <div
         className={`${
-          selected ? "bg-black text-white" : ""
+          selectedXS ? "bg-black text-white" : ""
         } w-8 h-8 text-xs flex justify-center items-center border-[1px] border-black`}
+        onClick={() => {
+          setSelectedXS(true);
+          setSelectedS(false);
+          setSelectedM(false);
+          setSelectedL(false);
+          setSelectedXL(false);
+          setSelectedXXL(false);
+        }}
       >
         <p>XS</p>
       </div>
       <div
         className={`${
-          selected ? "bg-black text-white" : ""
+          selectedS ? "bg-black text-white" : ""
         } w-8 h-8 text-xs flex justify-center items-center border-[1px] border-black`}
+        onClick={() => {
+          setSelectedXS(false);
+          setSelectedS(true);
+          setSelectedM(false);
+          setSelectedL(false);
+          setSelectedXL(false);
+          setSelectedXXL(false);
+        }}
       >
         <p>S</p>
       </div>
       <div
         className={`${
-          selected ? "bg-black text-white" : ""
+          selectedM ? "bg-black text-white" : ""
         } w-8 h-8 text-xs flex justify-center items-center border-[1px] border-black`}
+        onClick={() => {
+          setSelectedXS(false);
+          setSelectedS(false);
+          setSelectedM(true);
+          setSelectedL(false);
+          setSelectedXL(false);
+          setSelectedXXL(false);
+        }}
       >
         <p>M</p>
       </div>
       <div
         className={`${
-          selected ? "bg-black text-white" : ""
+          selectedL ? "bg-black text-white" : ""
         } w-8 h-8 text-xs flex justify-center items-center border-[1px] border-black`}
+        onClick={() => {
+          setSelectedXS(false);
+          setSelectedS(false);
+          setSelectedM(false);
+          setSelectedL(true);
+          setSelectedXL(false);
+          setSelectedXXL(false);
+        }}
       >
         <p>L</p>
       </div>
       <div
         className={`${
-          selected ? "bg-black text-white" : ""
+          selectedXL ? "bg-black text-white" : ""
         } w-8 h-8 text-xs flex justify-center items-center border-[1px] border-black`}
+        onClick={() => {
+          setSelectedXS(false);
+          setSelectedS(false);
+          setSelectedM(false);
+          setSelectedL(false);
+          setSelectedXL(true);
+          setSelectedXXL(false);
+        }}
       >
         <p>XL</p>
       </div>
       <div
         className={`${
-          selected ? "bg-black text-white" : ""
+          selectedXXL ? "bg-black text-white" : ""
         } w-8 h-8 text-xs flex justify-center items-center border-[1px] border-black`}
+        onClick={() => {
+          setSelectedXS(false);
+          setSelectedS(false);
+          setSelectedM(false);
+          setSelectedL(false);
+          setSelectedXL(false);
+          setSelectedXXL(true);
+        }}
       >
         <p>XXL</p>
       </div>
